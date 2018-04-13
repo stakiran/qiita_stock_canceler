@@ -1,0 +1,11 @@
+@echo off
+setlocal
+
+rem Set your proxy if needed.
+rem HTTPS_PROXY=https://(IP):(PORT)
+
+rem Must be used both of 'read_qiita' and 'write_qiita'.
+set QIITA_ACCESS_TOKEN=(YOUR-QIITA-ACCESS-TOKEN)
+
+python %~dp0stock_canceler.py
+pause
