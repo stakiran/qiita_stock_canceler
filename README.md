@@ -15,6 +15,7 @@ Qiita v2 API を使って自身のストックを全て消去する Python ス�
 - `stock_canceler.bat` を開き、QIITA_ACCESS_TOKEN 環境変数にアクセストークンを設定する
   - アクセストークンは [Qiitaにログイン後、設定画面から発行できます](https://qiita.com/settings/applications)
   - **read_qiita** と **write_qiita** の二つが必要です
+- `stock_canceler.py` の `target_userid = 'sta'` 部分を **自分の Qiita ユーザー名に修正してください**
 - プロキシが必要なら HTTPS_PROXY 環境変数もセットする
   - 例: `set HTTPS_PROXY=https://(IP):(PORT)`
 - `stock_canceler.bat` を実行する
@@ -48,7 +49,7 @@ Fin.
 
 # 注意事項
 
-ストック消去は 1 件につき 1 リクエストを行うため、ストック数が多い場合は **Rate Limit を使い切らないよう** ご注意ください。Qiita API v2 の Rate Limit は 2018/04/13 現在で [1000リクエスト/時](https://qiita.com/api/v2/docs#%E5%88%A9%E7%94%A8%E5%88%B6%E9%99%90) です。
+ストック消去は 1 件につき 1 リクエストを消費するため、ストック数が多い場合は **Rate Limit を使い切らないよう** ご注意ください。Qiita API v2 の Rate Limit は 2018/04/13 現在で [1000リクエスト/時](https://qiita.com/api/v2/docs#%E5%88%A9%E7%94%A8%E5%88%B6%E9%99%90) です。
 
 # License
 
