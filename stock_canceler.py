@@ -63,6 +63,22 @@ def cancel_stock(item_id):
     r = delete(url)
     return r
 
+def parse_arguments():
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+        description='Qiita Stock Canceler.',
+    )
+
+    parser.add_argument('-u', '--username', default=None, required=True,
+        help='Your Qiita Username.')
+
+    parsed_args = parser.parse_args()
+    return parsed_args
+
+args = parse_arguments()
+
 MYDIR = os.path.abspath(os.path.dirname(__file__))
 
 proxies = {
@@ -80,7 +96,7 @@ headers = {
 # -----------------------
 
 PAGE_START_NO = 1
-target_userid = 'sta'
+target_userid = args.username
 per_page = 100
 
 cur_page = PAGE_START_NO

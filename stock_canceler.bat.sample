@@ -7,5 +7,8 @@ rem HTTPS_PROXY=https://(IP):(PORT)
 rem Must be used both of 'read_qiita' and 'write_qiita'.
 set QIITA_ACCESS_TOKEN=(YOUR-QIITA-ACCESS-TOKEN)
 
-python %~dp0stock_canceler.py
+rem Set your Qiita username
+set QIITA_USERNAME=(YOUR-QIITA-USERNAME)
+
+python %~dp0stock_canceler.py -u %QIITA_USERNAME%
 pause

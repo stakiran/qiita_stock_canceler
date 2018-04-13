@@ -12,10 +12,11 @@ Qiita v2 API を使って自身のストックを全て消去する Python ス�
 - `git clone https://github.com/stakiran/qiita_stock_canceler`
 - `cd qiita_stock_canceler`
 - `copy stock_canceler.bat.sample stock_canceler.bat`
-- `stock_canceler.bat` を開き、QIITA_ACCESS_TOKEN 環境変数にアクセストークンを設定する
-  - アクセストークンは [Qiitaにログイン後、設定画面から発行できます](https://qiita.com/settings/applications)
-  - **read_qiita** と **write_qiita** の二つが必要です
-- `stock_canceler.py` の `target_userid = 'sta'` 部分を **自分の Qiita ユーザー名に修正してください**
+- `stock_canceler.bat` 内の以下を編集する
+  - QIITA_ACCESS_TOKEN 環境変数にアクセストークンを設定する
+    - アクセストークンは [Qiitaにログイン後、設定画面から発行できます](https://qiita.com/settings/applications)
+    - **read_qiita** と **write_qiita** の二つが必要です
+  - QIITA_USERNAME 環境変数に自分の Qiita ユーザー名を指定する
 - プロキシが必要なら HTTPS_PROXY 環境変数もセットする
   - 例: `set HTTPS_PROXY=https://(IP):(PORT)`
 - `stock_canceler.bat` を実行する
