@@ -104,7 +104,7 @@ all_stocks = []
 
 while True:
     a = (cur_page-1)*per_page + PAGE_START_NO
-    b = a + per_page
+    b = a + per_page - 1
     print('getting between {} to {}...'.format(a, b))
 
     stocks, is_last = get_stocks(target_userid, cur_page, per_page)
